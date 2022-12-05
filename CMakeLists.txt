@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.2)
+project(opencv_practice)
+set(CMAKE_CXX_STANDARD 11)
+link_directories(/usr/local/Cellar/opencv/4.6.0_1/lib)
+include_directories(/usr/local/Cellar/opencv/4.6.0_1/include/opencv4)
+add_subdirectory(01.montage)
