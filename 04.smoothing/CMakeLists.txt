@@ -1,10 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
-project(opencv_practice)
+project(smoothing VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 11)
 link_directories(/usr/local/Cellar/opencv/4.6.0_1/lib)
 include_directories(/usr/local/Cellar/opencv/4.6.0_1/include/opencv4)
-
-add_subdirectory(01.montage)
-add_subdirectory(02.montage_picture_make)
-add_subdirectory(03.montage_picture_grabout)
-add_subdirectory(04.smoothing)
+add_executable(smoothing main.cpp)
+target_link_libraries(smoothing opencv_core opencv_imgproc opencv_imgcodecs opencv_highgui opencv_photo)

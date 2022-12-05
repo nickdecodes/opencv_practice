@@ -2,7 +2,7 @@
 @Author  : zhengdongqi
 @Email   :
 @Usage   :
-@Filename: montage.cpp
+@Filename: main.cpp
 @DateTime: 2022/11/20 11:59
 @Software: CLion
 **/
@@ -23,7 +23,7 @@ int main(int argc, char const *argv[]) {
     int image_count = 39;
 
     // 想要生成的图片
-    Mat srcImage = imread("../xihu1.jpg");
+    Mat srcImage = imread("../test/xihu1.jpg");
     cout << srcImage.size() << endl;
 
     // 通过resize方法，进行尺寸设置
@@ -113,7 +113,7 @@ int main(int argc, char const *argv[]) {
 
     Mat dstImage;
     addWeighted(montageImage, 0.2, srcImage, 0.8, 3, dstImage);
-    imwrite("dstImage.jpg", dstImage);
+    imwrite("../test/dstImage.jpg", dstImage);
 
     imshow("montage", dstImage);
 
