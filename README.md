@@ -45,3 +45,19 @@ add_executable(demo main.cpp)
 target_link_libraries(demo $(OpenCV_LIBS))
 ```
 
+### mac
+
+```bash
+# 使用brew
+brew install opencv
+# 使用源码
+brew install gcc, openblas, suite-sparse, tbb, ceres-solver, numpy, gl2ps, glew, libaec, hdf5, jsoncpp, netcdf, pugixml, qt@5, pyqt@5, utf8cpp and vtk
+https://opencv.org/releases/
+mkdir build && cd build
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D BUILD_NEW_PYTHON_SUPPORT=ON -D WITH_V4L=ON -D INSTALL_C_EXAMPLES=ON INSTALL_PYTHON_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON -D WITH_OPENGL=ON ..
+make -j4
+sudo make install
+sudo sh -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
+sudo ldconfig
+```
+
