@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.2)
+project(opencv_funcs VERSION 1.0.0)
+set(CMAKE_CXX_STANDARD 11)
+link_directories(/usr/local/Cellar/opencv/4.6.0_1/lib)
+include_directories(/usr/local/Cellar/opencv/4.6.0_1/include/opencv4)
+add_executable(opencv_funcs main.cpp)
+target_link_libraries(opencv_funcs opencv_core opencv_imgproc opencv_imgcodecs opencv_highgui)
